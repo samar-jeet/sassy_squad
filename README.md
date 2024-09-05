@@ -1,4 +1,4 @@
-To create a README file based on the project structure in the screenshot, here’s a basic outline for your project, **SassySquad**:
+Here’s an updated version of the README file with the **tech stack** section added:
 
 ---
 
@@ -29,6 +29,35 @@ SassySquad/
 ├── manage.py      # Main management script for running the Django app
 ├── requirements.txt # List of project dependencies
 ```
+
+## Tech Stack
+
+- **Frontend:** 
+  - HTML5
+  - CSS3
+  - JavaScript
+  
+- **Backend:** 
+  - **Django** (Python framework)
+  - **Django Channels** for real-time WebSocket connections (Video/Audio/Text chat)
+  
+- **Database:** 
+  - **SQLite** (for local development)
+  - [PostgreSQL or MySQL] (for production environment, if applicable)
+
+- **Media Storage:**
+  - Local storage or **AWS S3** for file uploads (optional)
+
+- **WebSocket & Real-time Communication:** 
+  - **Django Channels**
+  - **Redis** (for handling WebSocket connections and real-time features)
+
+- **Authentication:**
+  - Django's built-in authentication system
+
+- **Deployment:**
+  - **Gunicorn** and **Nginx** for server management (for production)
+  - **Docker** (optional, for containerization)
 
 ## Installation
 
@@ -61,4 +90,3 @@ SassySquad/
 ## Contributing
 
 Feel free to submit issues or pull requests if you would like to contribute to the project.
-
