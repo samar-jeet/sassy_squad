@@ -1,0 +1,51 @@
+.quote {
+    background-color: #f9f9f9;
+    border-left: 8px solid #ff8c00; /* Thicker orange border for emphasis */
+    padding: 20px;
+    margin: 30px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    max-width: 600px; /* Limit width for better readability */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+.quote p {
+    font-style: italic; /* Italicize the quote text */
+    color: #333; /* Darkened text color for better contrast */
+}
+
+.quote::before {
+    content: "“"; /* Left double quotation mark before the quote */
+    font-size: 2em; /* Larger size for emphasis */
+    color: #ff8c00; /* Orange color matching the border */
+    margin-right: 10px; /* Space between quote mark and text */
+}
+
+.display-4 {
+    background-color: #ff8c00; /* Orange background */
+    padding: 40px; /* Increased padding for more presence */
+    margin: 30px 0; /* Margin above and below the heading */
+    font-family: 'Pacifico', cursive; /* Google Font: Pacifico for a handwritten look */
+    font-size: 60px; /* Larger font size */
+    text-align: center; /* Center-align text */
+    color: #fff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft box shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.display-4:hover {
+    transform: scale(1.05); /* Scale up on hover for a subtle effect */
+}
+
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+}
+

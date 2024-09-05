@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+{% block title %}
+    List of Memories
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>All Memories</h2>
+    <div class="row">
+        {% for memory in memories %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ memory.image.url }}" class="card-img-top" alt="{{ memory.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ memory.title }}</h5>
+                        <p class="card-text">{{ memory.description }}</p>
+                        <p class="card-text"><small class="text-muted">Created on {{ memory.created_at }}</small></p>
+                        {% if memory.drive_link %}
+                            <p class="card-text">Drive Link: <a href="{{ memory.drive_link }}" target="_blank">{{ memory.drive_link }}</a></p>
+                        {% else %}
+                            <a href="{% url 'memory-update' memory.pk %}" class="btn btn-secondary">Add Drive Link</a>
+                        {% endif %}
+                        <a href="{% url 'memory-update' memory.pk %}" class="btn btn-primary mt-2">Update</a>
+                        {% if user.is_staff %}
+                            <a href="{% url 'memory-delete' memory.pk %}" class="btn btn-danger mt-2">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
